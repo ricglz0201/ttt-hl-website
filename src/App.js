@@ -1,6 +1,6 @@
 import 'typeface-roboto'
 import React from 'react';
-import ButtonAppBar from './AppBar';
+import ButtonAppBar from './ButtonAppBar';
 
 const App = () => (
   <div>
