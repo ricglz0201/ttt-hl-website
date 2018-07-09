@@ -4,14 +4,14 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import HomePage from './HomePage'
 
 function TabContainer(props) {
   return (
-    <Typography component="div" style={{ padding: 8 * 3 }}>
+    <Grid container spacing={24} alignItems="center" className="container">
       {props.children}
-    </Typography>
+    </Grid>
   );
 }
 
@@ -57,7 +57,7 @@ class ButtonAppBar extends React.Component {
             <Tab label="About me" href="#basic-tabs" />
           </Tabs>
         </AppBar>
-        {value === 0 && <HomePage/>}
+        {value === 0 && <TabContainer><HomePage/></TabContainer>}
         {value === 1 && <TabContainer>Item Two</TabContainer>}
         {value === 2 && <TabContainer>Item Three</TabContainer>}
         {value === 3 && <TabContainer>Item Four</TabContainer>}

@@ -9,7 +9,8 @@ const styles =  theme => ({
   root: {
     flexGrow: 1,
     color: 'secondary',
-    textAlign: 'center'
+    textAlign: 'center',
+    backgroundColor: '#3f51b5',
   },
   flex: {
     flex: 1,
@@ -27,7 +28,7 @@ class Footer extends React.Component {
     return (
       <div className={classes.root}>
         <Typography component="div" style={{ padding: 12 }}>
-          <a href="https://github.com/ricglz0201/ttt-hl-website"><FontAwesomeIcon icon={faGithubAlt} /> Github</a>
+          <a style={{color: '#AAA'}} href="https://github.com/ricglz0201/ttt-hl-website"><FontAwesomeIcon icon={faGithubAlt} /> Github</a>
         </Typography>
       </div>
     );
