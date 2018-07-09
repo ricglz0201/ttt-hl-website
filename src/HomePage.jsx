@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import styles from './Content.css'
 import HomePageImages from './HomePageImages'
@@ -18,7 +17,7 @@ class HomePage extends React.Component {
       </Grid>
       <Grid item="item" xs={12} sm={8}>
         <Typography component="p" variant="body1">
-          This project was created with
+          This project was created with the objective of learning
         </Typography>
       </Grid>
       <Grid item="item" xs={12} sm={4}>
