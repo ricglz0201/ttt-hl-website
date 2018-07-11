@@ -1,7 +1,4 @@
 .container {
   min-height: 618px;
-  background-image: url('./images/homeBackground.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: white;
 }

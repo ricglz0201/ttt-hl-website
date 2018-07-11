@@ -8,9 +8,8 @@ import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 const styles =  theme => ({
   root: {
     flexGrow: 1,
-    color: 'secondary',
+    color: 'black',
     textAlign: 'center',
-    backgroundColor: '#3f51b5',
   },
   flex: {
     flex: 1,
@@ -28,7 +27,7 @@ class Footer extends React.Component {
     return (
       <div className={classes.root}>
         <Typography component="div" style={{ padding: 12 }}>
-          <a style={{color: '#AAA'}} href="https://github.com/ricglz0201/ttt-hl-website"><FontAwesomeIcon icon={faGithubAlt} /> Github</a>
+          <a style={{color: 'black'}} href="https://github.com/ricglz0201/ttt-hl-website"><FontAwesomeIcon icon={faGithubAlt} /> Github</a>
         </Typography>
       </div>
     );
