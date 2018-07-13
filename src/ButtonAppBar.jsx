@@ -24,12 +24,12 @@ const theme = createMuiTheme({
     MuiAppBar: {
       colorPrimary: {
         backgroundColor: 'white',
-        color: 'grey'
+        color: '#B2956B'
       },
     },
     MuiTabs: {
       indicator: {
-        backgroundColor: 'skyblue'
+        backgroundColor: '#E6F5FF'
       }
     }
   }

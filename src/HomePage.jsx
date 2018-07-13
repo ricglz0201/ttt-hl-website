@@ -10,10 +10,10 @@ const theme = createMuiTheme({
   overrides: {
     MuiTypography: {
       display3: {
-        color: 'blue'
+        color: '#7D9DB2'
       },
       display1: {
-        color: 'blue'
+        color: '#7D9DB2'
       }
     },
   }
@@ -29,7 +29,7 @@ class HomePage extends React.Component {
             {headline}
           </Typography>
           <Typography variant="display1" align="center" className="title" component="p">
-            Tic Tac Toe taken to a <ClicketyClack lines={line} erase="true" repeat="true" style={{color: 'purple'}} />
+            Tic Tac Toe taken to a <ClicketyClack lines={line} erase="true" repeat="true" style={{color: '#FF9A16'}} /><span style={{color: '#FF9A16'}}>|</span>
           </Typography>
         </Grid>
       </MuiThemeProvider>
