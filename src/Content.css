@@ -2,3 +2,7 @@
   min-height: 618px;
   background-color: white;
 }
+
+.content {
+  min-height: 562px;
+}

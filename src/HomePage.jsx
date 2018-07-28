@@ -24,13 +24,15 @@ class HomePage extends React.Component {
     const line = [subHead];
     return (
       <MuiThemeProvider theme={theme}>
-        <Grid item xs={12}>
-          <Typography variant="display3" align="center" className="title" component="h2">
-            {headline}
-          </Typography>
-          <Typography variant="display1" align="center" className="title" component="p">
-            Tic Tac Toe taken to a <ClicketyClack lines={line} erase="true" repeat="true" style={{color: '#FF9A16'}} /><span style={{color: '#FF9A16'}}>|</span>
-          </Typography>
+        <Grid container alignItems="center">
+          <Grid item xs={12}>
+            <Typography variant="display3" align="center" className="title" component="h2">
+              {headline}
+            </Typography>
+            <Typography variant="display1" align="center" className="title" component="p">
+              Tic Tac Toe taken to a <ClicketyClack lines={line} erase="true" repeat="true" style={{color: '#FF9A16'}} /><span style={{color: '#FF9A16'}}>|</span>
+            </Typography>
+          </Grid>
         </Grid>
       </MuiThemeProvider>
     );

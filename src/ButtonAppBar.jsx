@@ -5,11 +5,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
-import HomePage from './HomePage'
+import HomePage from './HomePage';
+import SPPage from './SPPage';
 
 function TabContainer(props) {
   return (
-    <Grid container spacing={24} alignItems="center" className="container">
+    <Grid container spacing={24} className="container">
       {props.children}
     </Grid>
   );
@@ -37,7 +38,7 @@ const theme = createMuiTheme({
 
 class ButtonAppBar extends React.Component {
   state = {
-    value: 0,
+    value: 1,
   };
 
   handleChange = (event, value) => {
@@ -52,15 +53,15 @@ class ButtonAppBar extends React.Component {
         <MuiThemeProvider theme={theme}>
           <AppBar position="static">
             <Tabs value={value} onChange={this.handleChange} centered>
-              <Tab label="Home" />
-              <Tab label="Single player" />
-              <Tab label="Multiplayer" />
-              <Tab label="Mobile" />
-              <Tab label="About me" href="#basic-tabs" />
+              <Tab label="Home" href="#" />
+              <Tab label="Single player" href="#SinglePayer" />
+              <Tab label="Multiplayer" href="#MultiPayer" />
+              <Tab label="Mobile" href="#Mobile" />
+              <Tab label="About me" href="#About" />
             </Tabs>
           </AppBar>
           {value === 0 && <TabContainer><HomePage/></TabContainer>}
-          {value === 1 && <TabContainer>Item Two</TabContainer>}
+          {value === 1 && <TabContainer><SPPage/></TabContainer>}
           {value === 2 && <TabContainer>Item Three</TabContainer>}
           {value === 3 && <TabContainer>Item Four</TabContainer>}
           {value === 4 && <TabContainer>Item Five</TabContainer>}
