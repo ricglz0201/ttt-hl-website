@@ -3,18 +3,24 @@ import Grid from '@material-ui/core/Grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import './Content.css';
-import SPTechnologies from './SPTechnologies'
+import {firstParagraph, secondParagraph, thirdParagraph} from './SPText'
+import SPLinks from './SPLinks'
+import SPCarousel from './SPCarousel'
 
 const theme = createMuiTheme({
   overrides: {
     MuiGrid: {
       container: {
-        marginTop: 25
-      }
+        marginTop: 25,
+      },
+      item: {
+        marginRight: 50,
+      },
     },
     MuiTypography: {
       body1: {
-        paddingLeft: 30
+        paddingLeft: 30,
+        lineHeight: '3em'
       }
     },
   }
@@ -24,12 +30,15 @@ class SPContent extends React.Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <Grid container>
+        <Grid container alignItems='center'>
           <Grid item xs={8}>
-            <Typography>Hello world</Typography>
+            <Typography variant='body1' component='p'>{firstParagraph}</Typography>
+            <Typography variant='body1' component='p'>{secondParagraph}</Typography>
+            <Typography variant='body1' component='p'>{thirdParagraph}</Typography>
+            <SPLinks/>
           </Grid>
-          <Grid item xs={4}>
-            <Typography>Hello world</Typography>
+          <Grid item xs={3}>
+            <SPCarousel/>
           </Grid>
         </Grid>
       </MuiThemeProvider>

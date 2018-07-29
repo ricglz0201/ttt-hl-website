@@ -1,14 +1,13 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import './Content.css';
 import SPTechnologies from './SPTechnologies'
 import SPContent from './SPContent'
 
 const theme = createMuiTheme({
   overrides: {
-    
+
   }
 });
 

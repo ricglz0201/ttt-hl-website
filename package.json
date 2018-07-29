@@ -19,8 +19,9 @@
     "react-clicketyclack": "^1.2.2",
     "react-dom": "^16.4.1",
     "react-fontawesome": "^1.6.1",
+    "react-image-lightbox": "^5.0.0",
     "react-scripts": "1.1.4",
-    "react-swipeable-views": "^0.12.14",
+    "react-swipeable-views": "^0.12.15",
     "typeface-roboto": "0.0.54"
   },
   "scripts": {
