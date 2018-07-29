@@ -5,8 +5,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
-import HomePage from './HomePage';
-import SPPage from './SPPage';
+import HomePage from './Home/HomePage';
+import SPPage from './SinglePlayer/SPPage';
 
 function TabContainer(props) {
   return (
@@ -54,7 +54,7 @@ class ButtonAppBar extends React.Component {
           <AppBar position="static">
             <Tabs value={value} onChange={this.handleChange} centered>
               <Tab label="Home" href="#" />
-              <Tab label="Single player" href="#SinglePayer" />
+              <Tab label="Single player" href="#SinglePlayer" />
               <Tab label="Multiplayer" href="#MultiPayer" />
               <Tab label="Mobile" href="#Mobile" />
               <Tab label="About me" href="#About" />

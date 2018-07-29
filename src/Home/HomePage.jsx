@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import ClicketyClack from 'react-clicketyclack'
-import './Content.css'
+import '../Content.css'
 import {headline, subHead} from './HomePageText';
 
 const theme = createMuiTheme({

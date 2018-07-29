@@ -2,12 +2,12 @@ import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
 import Grid from '@material-ui/core/Grid';
-import './Technologies.css'
-import Bootstrap from './images/bootstrap_logo.svg'
-import Css from './images/css_logo.png'
-import Html from './images/html_logo.png'
-import Js from './images/js_logo.png'
-import JQuery from './images/jquery_logo.png'
+import '../Technologies.css'
+import Bootstrap from '../images/bootstrap_logo.svg'
+import Css from '../images/css_logo.png'
+import Html from '../images/html_logo.png'
+import Js from '../images/js_logo.png'
+import JQuery from '../images/jquery_logo.png'
 
 export default class SPTechnologies extends React.Component {
   render() {

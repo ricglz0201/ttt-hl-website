@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import './Content.css';
+import '../Content.css';
 import SPTechnologies from './SPTechnologies'
 import SPContent from './SPContent'
 

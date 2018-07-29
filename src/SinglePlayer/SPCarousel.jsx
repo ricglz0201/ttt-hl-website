@@ -6,9 +6,9 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import sp1 from './images/sp1.png';
-import sp2 from './images/sp2.png';
-import sp3 from './images/sp3.png';
+import sp1 from '../images/sp1.png';
+import sp2 from '../images/sp2.png';
+import sp3 from '../images/sp3.png';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
