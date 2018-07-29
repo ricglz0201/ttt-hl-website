@@ -55,7 +55,6 @@ class SPCarousel extends React.Component {
 
   handleStepChange = activeStep => {
     this.setState({ activeStep });
-    console.log(activeStep);
   };
 
   render() {
