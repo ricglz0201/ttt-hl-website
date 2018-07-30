@@ -11,20 +11,26 @@ import Ror from '../images/ror_logo.png'
 export default class MPTechnologies extends React.Component {
   render() {
     return (
-      <Grid container justify='center' className='technologies'>
+      <Grid container spacing={8} justify='center' style={{marginTop:13}}>
         <Grid item>
           <Chip
             avatar={<Avatar src={I18n} />}
             label="I18n"
           />
+        </Grid>
+        <Grid item>
           <Chip
             avatar={<Avatar src={Js} />}
             label="Javascript"
           />
+        </Grid>
+        <Grid item>
           <Chip
             avatar={<Avatar src={Md} />}
             label="Material design"
           />
+        </Grid>
+        <Grid item>
           <Chip
             avatar={<Avatar src={Ror} />}
             label="Ruby on Rails"
