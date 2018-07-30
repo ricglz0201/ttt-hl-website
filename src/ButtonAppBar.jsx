@@ -59,14 +59,12 @@ class ButtonAppBar extends React.Component {
               <Tab label="Single player" href="#SinglePlayer" />
               <Tab label="Multiplayer" href="#MultiPlayer" />
               <Tab label="Mobile" href="#Mobile" />
-              <Tab label="About me" href="#About" />
             </Tabs>
           </AppBar>
           {value === 0 && <TabContainer><HomePage/></TabContainer>}
           {value === 1 && <TabContainer><SPPage/></TabContainer>}
           {value === 2 && <TabContainer><MPPage/></TabContainer>}
           {value === 3 && <TabContainer><MPage/></TabContainer>}
-          {value === 4 && <TabContainer>Item Five</TabContainer>}
         </MuiThemeProvider>
       </div>
     );

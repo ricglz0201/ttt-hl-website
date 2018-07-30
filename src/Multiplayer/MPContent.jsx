@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import {firstParagraph, secondParagraph, thirdParagraph, fourthParagraph} from './MPText'
+import {firstParagraph, secondParagraph, thirdParagraph, fourthParagraph, fifthParagraph, sixthParagraph} from './MPText'
 import MPLinks from './MPLinks'
 import MPCarousel from './MPCarousel'
 
@@ -35,6 +35,8 @@ class MPContent extends React.Component {
             <Typography variant='body1' component='p'>{secondParagraph}</Typography>
             <Typography variant='body1' component='p'>{thirdParagraph}</Typography>
             <Typography variant='body1' component='p'>{fourthParagraph}</Typography>
+            <Typography variant='body1' component='p'>{fifthParagraph}</Typography>
+            <Typography variant='body1' component='p'>{sixthParagraph}</Typography>
             <MPLinks/>
           </Grid>
           <Grid item xs={3}>

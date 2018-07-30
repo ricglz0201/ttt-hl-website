@@ -6,48 +6,12 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import sp1 from '../images/sp1.png';
-import sp2 from '../images/sp2.png';
-import sp3 from '../images/sp3.png';
+import tutorialSteps from './MPTutorialSteps';
+import styles from './MPStyle';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const tutorialSteps = [ {
-    img: sp1,
-    id: 0,
-  },
-  {
-    img: sp2,
-    id: 1,
-  },
-  {
-    img: sp3,
-    id: 2,
-  },
-];
-
-const styles = theme => ({
-  root: {
-    maxWidth: 400,
-    flexGrow: 1,
-  },
-  header: {
-    display: 'flex',
-    alignItems: 'center',
-    height: 50,
-    paddingLeft: theme.spacing.unit * 4,
-    marginBottom: 20,
-    backgroundColor: theme.palette.background.default,
-  },
-  img: {
-    height: 255,
-    maxWidth: 400,
-    overflow: 'hidden',
-    width: '100%',
-  },
-});
-
-class SPCarousel extends React.Component {
+class MPCarousel extends React.Component {
   state = {
     activeStep: 0,
     isOpen: false,
@@ -104,9 +68,9 @@ class SPCarousel extends React.Component {
   }
 }
 
-SPCarousel.propTypes = {
+MPCarousel.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(SPCarousel);
+export default withStyles(styles, { withTheme: true })(MPCarousel);

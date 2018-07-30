@@ -7,6 +7,7 @@ import I18n from '../images/i18n_logo.png'
 import Js from '../images/js_logo.png'
 import Md from '../images/md_logo.png'
 import Ror from '../images/ror_logo.png'
+import Rubocop from '../images/rubocop_logo.png'
 
 export default class MPTechnologies extends React.Component {
   render() {
@@ -34,6 +35,12 @@ export default class MPTechnologies extends React.Component {
           <Chip
             avatar={<Avatar src={Ror} />}
             label="Ruby on Rails"
+          />
+        </Grid>
+        <Grid item>
+          <Chip
+            avatar={<Avatar src={Rubocop} />}
+            label="Rubocop"
           />
         </Grid>
       </Grid>
