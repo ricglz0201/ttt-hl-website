@@ -40,7 +40,7 @@ const theme = createMuiTheme({
 
 class ButtonAppBar extends React.Component {
   state = {
-    value: 3,
+    value: 0,
   };
 
   handleChange = (event, value) => {
