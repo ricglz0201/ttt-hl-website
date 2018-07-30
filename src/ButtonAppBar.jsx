@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
 import HomePage from './Home/HomePage';
 import SPPage from './SinglePlayer/SPPage';
+import MPPage from './Multiplayer/MPPage';
 
 function TabContainer(props) {
   return (
@@ -38,7 +39,7 @@ const theme = createMuiTheme({
 
 class ButtonAppBar extends React.Component {
   state = {
-    value: 1,
+    value: 2,
   };
 
   handleChange = (event, value) => {
@@ -55,14 +56,14 @@ class ButtonAppBar extends React.Component {
             <Tabs value={value} onChange={this.handleChange} centered>
               <Tab label="Home" href="#" />
               <Tab label="Single player" href="#SinglePlayer" />
-              <Tab label="Multiplayer" href="#MultiPayer" />
+              <Tab label="Multiplayer" href="#MultiPlayer" />
               <Tab label="Mobile" href="#Mobile" />
               <Tab label="About me" href="#About" />
             </Tabs>
           </AppBar>
           {value === 0 && <TabContainer><HomePage/></TabContainer>}
           {value === 1 && <TabContainer><SPPage/></TabContainer>}
-          {value === 2 && <TabContainer>Item Three</TabContainer>}
+          {value === 2 && <TabContainer><MPPage/></TabContainer>}
           {value === 3 && <TabContainer>Item Four</TabContainer>}
           {value === 4 && <TabContainer>Item Five</TabContainer>}
         </MuiThemeProvider>
