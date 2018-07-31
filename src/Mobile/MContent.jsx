@@ -38,7 +38,6 @@ class MContent extends React.Component {
             <MLinks/>
           </Grid>
           <Grid item xs={3}>
-            <MCarousel/>
           </Grid>
         </Grid>
       </MuiThemeProvider>
