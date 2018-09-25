@@ -17,7 +17,7 @@ class MLinks extends React.Component {
       <MuiThemeProvider theme={theme}>
         <Grid container alignItems='center' justify='center' alignContent='center'>
           <Grid item xs={2}>
-            <Typography variant='body1' href='https://github.com/ricglz0201/Tic-Tac-Toe-HL-Mobile' component='a'><FontAwesomeIcon icon={faGithubAlt} /> Website Github</Typography>
+            <Typography variant='body1' href='https://github.com/ricglz0201/ttt-mobile' component='a'><FontAwesomeIcon icon={faGithubAlt} /> Website Github</Typography>
           </Grid>
         </Grid>
       </MuiThemeProvider>

@@ -22,6 +22,12 @@ class SPLinks extends React.Component {
           <Grid item xs={1}>
             <Typography variant='body1' component='a' href='https://ricglz0201.github.io/Tic-Tac-Toe-HL/'>Website</Typography>
           </Grid>
+          <Grid item xs={2}>
+            <Typography variant='body1' href='https://github.com/ricglz0201/ttt-react' component='a'><FontAwesomeIcon icon={faGithubAlt} /> React version repo</Typography>
+          </Grid>
+          <Grid item xs={3}>
+            <Typography variant='body1' component='a' href='https://ttt-hl-react.firebaseapp.com/'>React website</Typography>
+          </Grid>
         </Grid>
       </MuiThemeProvider>
     );

@@ -8,6 +8,7 @@ import Css from '../images/css_logo.png'
 import Html from '../images/html_logo.png'
 import Js from '../images/js_logo.png'
 import JQuery from '../images/jquery_logo.png'
+import ReactImg from '../images/rn_logo.png'
 
 export default class SPTechnologies extends React.Component {
   render() {
@@ -33,6 +34,10 @@ export default class SPTechnologies extends React.Component {
           <Chip
             avatar={<Avatar src={JQuery} />}
             label="JQuery"
+          />
+          <Chip
+            avatar={<Avatar src={ReactImg} />}
+            label="React"
           />
         </Grid>
       </Grid>
