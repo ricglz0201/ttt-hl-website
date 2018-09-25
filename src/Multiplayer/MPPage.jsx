@@ -1,14 +1,12 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import '../Content.css';
-import MPTechnologies from './MPTechnologies'
-import MPContent from './MPContent'
+import React from "react";
+import Grid from "@material-ui/core/Grid";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import "../Content.css";
+import MPTechnologies from "./MPTechnologies";
+import MPContent from "./MPContent";
 
 const theme = createMuiTheme({
-  overrides: {
-
-  }
+  overrides: {}
 });
 
 class MPPage extends React.Component {
@@ -16,8 +14,8 @@ class MPPage extends React.Component {
     return (
       <MuiThemeProvider theme={theme}>
         <Grid item xs={12}>
-          <MPTechnologies/>
-          <MPContent/>
+          <MPTechnologies />
+          <MPContent />
         </Grid>
       </MuiThemeProvider>
     );
