@@ -1,14 +1,12 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import '../Content.css';
-import SPTechnologies from './SPTechnologies'
-import SPContent from './SPContent'
+import React from "react";
+import Grid from "@material-ui/core/Grid";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import "../Content.css";
+import SPTechnologies from "./SPTechnologies";
+import SPContent from "./SPContent";
 
 const theme = createMuiTheme({
-  overrides: {
-
-  }
+  overrides: {}
 });
 
 class SPPage extends React.Component {
@@ -16,8 +14,8 @@ class SPPage extends React.Component {
     return (
       <MuiThemeProvider theme={theme}>
         <Grid item xs={12}>
-          <SPTechnologies/>
-          <SPContent/>
+          <SPTechnologies />
+          <SPContent />
         </Grid>
       </MuiThemeProvider>
     );
