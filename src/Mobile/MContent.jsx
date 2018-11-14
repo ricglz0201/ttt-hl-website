@@ -4,7 +4,6 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import {firstParagraph, secondParagraph, thirdParagraph, fourthParagraph} from './MText'
 import MLinks from './MLinks'
-import MCarousel from './MCarousel'
 
 const theme = createMuiTheme({
   overrides: {
