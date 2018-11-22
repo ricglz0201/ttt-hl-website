@@ -1,11 +1,9 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import {
-  firstParagraph, secondParagraph, thirdParagraph, fourthParagraph,
-} from './MText';
+import paragraphs from './MText';
 import MLinks from './MLinks';
+import Paragraphs from '../Helper/Paragraphs';
 
 const theme = createMuiTheme({
   overrides: {
@@ -30,18 +28,7 @@ const MContent = () => (
   <MuiThemeProvider theme={theme}>
     <Grid container alignItems="center">
       <Grid item xs={8}>
-        <Typography variant="body1" component="p">
-          {firstParagraph}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {secondParagraph}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {thirdParagraph}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {fourthParagraph}
-        </Typography>
+        <Paragraphs paragraphs={paragraphs} />
         <MLinks />
       </Grid>
       <Grid item xs={3} />

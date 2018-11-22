@@ -1,12 +1,11 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import {
-  firstParagraph, secondParagraph, thirdParagraph, fourthParagraph,
-} from './SPText';
+import paragraphs from './SPText';
 import SPLinks from './SPLinks';
 import SPCarousel from './SPCarousel';
+import Carousel from '../Helper/Carousel';
+import Paragraphs from '../Helper/Paragraphs';
 
 const theme = createMuiTheme({
   overrides: {
@@ -31,22 +30,11 @@ const SPContent = () => (
   <MuiThemeProvider theme={theme}>
     <Grid container alignItems="center">
       <Grid item xs={8}>
-        <Typography variant="body1" component="p">
-          {firstParagraph}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {secondParagraph}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {thirdParagraph}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {fourthParagraph}
-        </Typography>
+        <Paragraphs paragraphs={paragraphs} />
         <SPLinks />
       </Grid>
       <Grid item xs={3}>
-        <SPCarousel />
+        <Carousel steps={SPCarousel} />
       </Grid>
     </Grid>
   </MuiThemeProvider>
