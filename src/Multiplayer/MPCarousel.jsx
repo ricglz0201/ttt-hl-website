@@ -1,23 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import MobileStepper from "@material-ui/core/MobileStepper";
-import SwipeableViews from "react-swipeable-views";
-import { autoPlay } from "react-swipeable-views-utils";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
-import tutorialSteps from "./MPTutorialSteps";
-import styles from "./MPStyle";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import MobileStepper from '@material-ui/core/MobileStepper';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
+import tutorialSteps from './MPTutorialSteps';
+import styles from './MPStyle';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 class MPCarousel extends React.Component {
   state = {
     activeStep: 0,
-    isOpen: false
+    isOpen: false,
   };
 
-  handleStepChange = activeStep => {
+  handleStepChange = (activeStep) => {
     this.setState({ activeStep });
   };
 
@@ -30,8 +30,8 @@ class MPCarousel extends React.Component {
     return (
       <div className={classes.root}>
         <AutoPlaySwipeableViews
-          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-          index={this.state.activeStep}
+          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+          index={activeStep}
           onChangeIndex={this.handleStepChange}
           onClick={() => this.setState({ isOpen: true })}
         >
@@ -51,15 +51,13 @@ class MPCarousel extends React.Component {
             nextSrc={tutorialSteps[(activeStep + 1) % maxSteps].img}
             prevSrc={tutorialSteps[(activeStep + maxSteps - 1) % maxSteps].img}
             onCloseRequest={() => this.setState({ isOpen: false })}
-            onMovePrevRequest={() =>
-              this.setState({
-                activeStep: (activeStep + maxSteps - 1) % maxSteps
-              })
+            onMovePrevRequest={() => this.setState({
+              activeStep: (activeStep + maxSteps - 1) % maxSteps,
+            })
             }
-            onMoveNextRequest={() =>
-              this.setState({
-                activeStep: (activeStep + 1) % maxSteps
-              })
+            onMoveNextRequest={() => this.setState({
+              activeStep: (activeStep + 1) % maxSteps,
+            })
             }
           />
         )}
@@ -70,7 +68,7 @@ class MPCarousel extends React.Component {
 
 MPCarousel.propTypes = {
   classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(MPCarousel);

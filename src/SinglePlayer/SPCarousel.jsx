@@ -1,60 +1,60 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import MobileStepper from "@material-ui/core/MobileStepper";
-import SwipeableViews from "react-swipeable-views";
-import { autoPlay } from "react-swipeable-views-utils";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
-import sp1 from "../images/sp1.png";
-import sp2 from "../images/sp2.png";
-import sp3 from "../images/sp3.png";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import MobileStepper from '@material-ui/core/MobileStepper';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
+import sp1 from '../images/sp1.png';
+import sp2 from '../images/sp2.png';
+import sp3 from '../images/sp3.png';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
     img: sp1,
-    id: 0
+    id: 0,
   },
   {
     img: sp2,
-    id: 1
+    id: 1,
   },
   {
     img: sp3,
-    id: 2
-  }
+    id: 2,
+  },
 ];
 
 const styles = theme => ({
   root: {
     maxWidth: 400,
-    flexGrow: 1
+    flexGrow: 1,
   },
   header: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing.unit * 4,
     marginBottom: 20,
-    backgroundColor: theme.palette.background.default
+    backgroundColor: theme.palette.background.default,
   },
   img: {
     height: 255,
     maxWidth: 400,
-    overflow: "hidden",
-    width: "100%"
-  }
+    overflow: 'hidden',
+    width: '100%',
+  },
 });
 
 class SPCarousel extends React.Component {
   state = {
     activeStep: 0,
-    isOpen: false
+    isOpen: false,
   };
 
-  handleStepChange = activeStep => {
+  handleStepChange = (activeStep) => {
     this.setState({ activeStep });
   };
 
@@ -67,7 +67,7 @@ class SPCarousel extends React.Component {
     return (
       <div className={classes.root}>
         <AutoPlaySwipeableViews
-          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={this.state.activeStep}
           onChangeIndex={this.handleStepChange}
           onClick={() => this.setState({ isOpen: true })}
@@ -88,15 +88,13 @@ class SPCarousel extends React.Component {
             nextSrc={tutorialSteps[(activeStep + 1) % maxSteps].img}
             prevSrc={tutorialSteps[(activeStep + maxSteps - 1) % maxSteps].img}
             onCloseRequest={() => this.setState({ isOpen: false })}
-            onMovePrevRequest={() =>
-              this.setState({
-                activeStep: (activeStep + maxSteps - 1) % maxSteps
-              })
+            onMovePrevRequest={() => this.setState({
+              activeStep: (activeStep + maxSteps - 1) % maxSteps,
+            })
             }
-            onMoveNextRequest={() =>
-              this.setState({
-                activeStep: (activeStep + 1) % maxSteps
-              })
+            onMoveNextRequest={() => this.setState({
+              activeStep: (activeStep + 1) % maxSteps,
+            })
             }
           />
         )}
@@ -107,7 +105,7 @@ class SPCarousel extends React.Component {
 
 SPCarousel.propTypes = {
   classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(SPCarousel);

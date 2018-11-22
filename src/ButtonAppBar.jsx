@@ -1,46 +1,33 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Grid from "@material-ui/core/Grid";
-import HomePage from "./Home/HomePage";
-import SPPage from "./SinglePlayer/SPPage";
-import MPPage from "./Multiplayer/MPPage";
-import MPage from "./Mobile/MPage";
-
-function TabContainer(props) {
-  return (
-    <Grid container spacing={24} className="container">
-      {props.children}
-    </Grid>
-  );
-}
-
-TabContainer.propTypes = {
-  children: PropTypes.node.isRequired
-};
+import React from 'react';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import HomePage from './Home/HomePage';
+import SPPage from './SinglePlayer/SPPage';
+import MPPage from './Multiplayer/MPPage';
+import MPage from './Mobile/MPage';
+import TabContainer from './TabContainer';
 
 const theme = createMuiTheme({
   overrides: {
     MuiAppBar: {
       colorPrimary: {
-        backgroundColor: "white",
-        color: "#B2956B"
-      }
+        backgroundColor: 'white',
+        color: '#B2956B',
+      },
     },
     MuiTabs: {
       indicator: {
-        backgroundColor: "#E6F5FF"
-      }
-    }
-  }
+        backgroundColor: '#E6F5FF',
+      },
+    },
+  },
 });
 
 class ButtonAppBar extends React.Component {
   state = {
-    value: 0
+    value: 0,
   };
 
   handleChange = (event, value) => {
@@ -61,26 +48,20 @@ class ButtonAppBar extends React.Component {
               <Tab label="Mobile" href="#Mobile" />
             </Tabs>
           </AppBar>
-          {value === 0 && (
-            <TabContainer>
+          <TabContainer>
+            {value === 0 && (
               <HomePage />
-            </TabContainer>
-          )}
-          {value === 1 && (
-            <TabContainer>
+            )}
+            {value === 1 && (
               <SPPage />
-            </TabContainer>
-          )}
-          {value === 2 && (
-            <TabContainer>
+            )}
+            {value === 2 && (
               <MPPage />
-            </TabContainer>
-          )}
-          {value === 3 && (
-            <TabContainer>
+            )}
+            {value === 3 && (
               <MPage />
-            </TabContainer>
-          )}
+            )}
+          </TabContainer>
         </MuiThemeProvider>
       </div>
     );

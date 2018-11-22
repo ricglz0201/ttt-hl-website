@@ -1,0 +1,12 @@
+# Ignore test files
+*.test.js
+*.test.jsx
+
+# Build products
+build/
+coverage/
+fixtures/
+scripts/bench/benchmarks/**/*.js
+
+# Index and service
+src/registerServiceWorker.js
