@@ -1,17 +1,11 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import {
-  firstParagraph,
-  secondParagraph,
-  thirdParagraph,
-  fourthParagraph,
-  fifthParagraph,
-  sixthParagraph,
-} from './MPText';
+import paragraphs from './MPText';
 import MPLinks from './MPLinks';
 import MPCarousel from './MPCarousel';
+import Carousel from '../Helper/Carousel';
+import Paragraphs from '../Helper/Paragraphs';
 
 const theme = createMuiTheme({
   overrides: {
@@ -36,28 +30,11 @@ const MPContent = () => (
   <MuiThemeProvider theme={theme}>
     <Grid container alignItems="center">
       <Grid item xs={8}>
-        <Typography variant="body1" component="p">
-          {firstParagraph}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {secondParagraph}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {thirdParagraph}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {fourthParagraph}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {fifthParagraph}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {sixthParagraph}
-        </Typography>
+        <Paragraphs paragraphs={paragraphs} />
         <MPLinks />
       </Grid>
       <Grid item xs={3}>
-        <MPCarousel />
+        <Carousel steps={MPCarousel} />
       </Grid>
     </Grid>
   </MuiThemeProvider>

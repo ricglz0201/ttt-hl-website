@@ -1,26 +1,13 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import LinkContainer from '../Helper/LinkContainer';
 
-const theme = createMuiTheme({
-  overrides: {},
-});
+const links = [
+  { link: 'https://github.com/ricglz0201/ttt-mobile', img: faGithubAlt, label: 'Repo' },
+];
 
 const MLinks = () => (
-  <MuiThemeProvider theme={theme}>
-    <Grid container alignItems="center" justify="center" alignContent="center">
-      <Grid item xs={2}>
-        <Typography variant="body1" href="https://github.com/ricglz0201/ttt-mobile" component="a">
-          <FontAwesomeIcon icon={faGithubAlt} />
-          {' '}
-          Website Github
-        </Typography>
-      </Grid>
-    </Grid>
-  </MuiThemeProvider>
+  <LinkContainer links={links} />
 );
 
 export default MLinks;

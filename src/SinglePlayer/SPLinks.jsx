@@ -1,36 +1,17 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { faGamepad } from '@fortawesome/free-solid-svg-icons';
+import LinkContainer from '../Helper/LinkContainer';
+
+const links = [
+  { link: 'https://github.com/ricglz0201/Tic-Tac-Toe-HL', img: faGithubAlt, label: 'Repo' },
+  { link: 'https://ricglz0201.github.io/Tic-Tac-Toe-HL/', img: faGamepad, label: 'Website' },
+  { link: 'https://github.com/ricglz0201/ttt-react', img: faGithubAlt, label: 'Repo' },
+  { link: 'https://ttt-hl-react.firebaseapp.com/', img: faGamepad, label: 'Website' },
+];
 
 const SPLinks = () => (
-  <Grid container alignItems="center" justify="center" alignContent="center">
-    <Grid item xs={2}>
-      <Typography variant="body1" href="https://github.com/ricglz0201/Tic-Tac-Toe-HL" component="a">
-        <FontAwesomeIcon icon={faGithubAlt} />
-        {' '}
-        Website Github
-      </Typography>
-    </Grid>
-    <Grid item xs={1}>
-      <Typography variant="body1" component="a" href="https://ricglz0201.github.io/Tic-Tac-Toe-HL/">
-        Website
-      </Typography>
-    </Grid>
-    <Grid item xs={2}>
-      <Typography variant="body1" href="https://github.com/ricglz0201/ttt-react" component="a">
-        <FontAwesomeIcon icon={faGithubAlt} />
-        {' '}
-        React version repo
-      </Typography>
-    </Grid>
-    <Grid item xs={3}>
-      <Typography variant="body1" component="a" href="https://ttt-hl-react.firebaseapp.com/">
-        React website
-      </Typography>
-    </Grid>
-  </Grid>
+  <LinkContainer links={links} />
 );
 
 export default SPLinks;

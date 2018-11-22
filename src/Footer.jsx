@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import LinkContainer from './Helper/LinkContainer';
 
 const styles = () => ({
   root: {
@@ -20,14 +19,17 @@ const styles = () => ({
   },
 });
 
+const links = [
+  {
+    link: 'https://github.com/ricglz0201/ttt-hl-website',
+    img: faGithubAlt,
+    label: 'Github',
+  },
+];
+
 const Footer = ({ classes }) => (
   <div className={classes.root}>
-    <Typography component="div" style={{ padding: 12 }}>
-      <a style={{ color: 'black' }} href="https://github.com/ricglz0201/ttt-hl-website">
-        <FontAwesomeIcon icon={faGithubAlt} />
-        Github
-      </a>
-    </Typography>
+    <LinkContainer links={links} />
   </div>
 );
 
