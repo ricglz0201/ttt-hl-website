@@ -104,8 +104,8 @@ class MCarousel extends React.Component {
 }
 
 MCarousel.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+  classes: PropTypes.instanceOf(Object).isRequired,
+  theme: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(MCarousel);

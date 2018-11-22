@@ -68,7 +68,7 @@ class SPCarousel extends React.Component {
       <div className={classes.root}>
         <AutoPlaySwipeableViews
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={this.state.activeStep}
+          index={activeStep}
           onChangeIndex={this.handleStepChange}
           onClick={() => this.setState({ isOpen: true })}
         >
@@ -104,8 +104,8 @@ class SPCarousel extends React.Component {
 }
 
 SPCarousel.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+  classes: PropTypes.instanceOf(Object).isRequired,
+  theme: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(SPCarousel);

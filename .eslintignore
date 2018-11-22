@@ -9,4 +9,5 @@ fixtures/
 scripts/bench/benchmarks/**/*.js
 
 # Index and service
+src/index.js
 src/registerServiceWorker.js
