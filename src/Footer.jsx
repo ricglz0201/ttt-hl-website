@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 
-const styles = theme => ({
+const styles = () => ({
   root: {
     flexGrow: 1,
     color: 'black',
@@ -32,7 +32,7 @@ const Footer = ({ classes }) => (
 );
 
 Footer.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default withStyles(styles)(Footer);

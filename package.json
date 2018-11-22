@@ -34,8 +34,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "eslint src/**/*.jsx",
-    "fix-lint": "eslint --fix src/**/*.jsx"
+    "lint": "eslint src/*.jsx src/**/*.jsx",
+    "fix-lint": "eslint --fix src/*.jsx src/**/*.jsx"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^17.1.0",
