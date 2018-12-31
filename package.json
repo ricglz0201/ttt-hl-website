@@ -22,7 +22,7 @@
     "react-dom": "^16.7.0",
     "react-fontawesome": "^1.6.1",
     "react-image-lightbox": "^5.1.0",
-    "react-scripts": "^2.1.1",
+    "react-scripts": "^2.1.2",
     "react-swipeable-views": "^0.13.0",
     "react-swipeable-views-utils": "^0.13.0",
     "typeface-roboto": "0.0.54"
