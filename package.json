@@ -19,7 +19,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.8.1",
     "react-clicketyclack": "^1.2.2",
-    "react-dom": "^16.7.0",
+    "react-dom": "^16.8.1",
     "react-fontawesome": "^1.6.1",
     "react-image-lightbox": "^5.1.0",
     "react-scripts": "^2.1.3",
