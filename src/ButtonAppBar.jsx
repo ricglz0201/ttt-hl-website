@@ -3,6 +3,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import PropTypes from 'prop-types';
 import HomePage from './Home/HomePage';
 import SPPage from './SinglePlayer/SPPage';
 import MPPage from './Multiplayer/MPPage';
@@ -25,47 +26,49 @@ const theme = createMuiTheme({
   },
 });
 
-class ButtonAppBar extends React.Component {
-  state = {
-    value: 0,
-  };
-
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
-
-  render() {
-    const { value } = this.state;
-
-    return (
-      <div>
-        <MuiThemeProvider theme={theme}>
-          <AppBar position="static">
-            <Tabs value={value} onChange={this.handleChange} centered>
-              <Tab label="Home" href="#" />
-              <Tab label="Single player" href="#SinglePlayer" />
-              <Tab label="Multiplayer" href="#MultiPlayer" />
-              <Tab label="Mobile" href="#Mobile" />
-            </Tabs>
-          </AppBar>
-          <TabContainer>
-            {value === 0 && (
-              <HomePage />
-            )}
-            {value === 1 && (
-              <SPPage />
-            )}
-            {value === 2 && (
-              <MPPage />
-            )}
-            {value === 3 && (
-              <MPage />
-            )}
-          </TabContainer>
-        </MuiThemeProvider>
-      </div>
-    );
+function ContainedComponent({ index }) {
+  switch (index) {
+    case 0:
+      return <HomePage />;
+    case 1:
+      return <SPPage />;
+    case 2:
+      return <MPPage />;
+    case 3:
+      return <MPage />;
+    default:
+      return null;
   }
+}
+
+ContainedComponent.propTypes = {
+  index: PropTypes.number.isRequired,
+};
+
+function ButtonAppBar() {
+  const [index, setIndex] = React.useState(0);
+
+  const handleChange = React.useCallback((_, newIndex) => {
+    setIndex(newIndex);
+  }, []);
+
+  return (
+    <div>
+      <MuiThemeProvider theme={theme}>
+        <AppBar position="static">
+          <Tabs value={index} onChange={handleChange} centered>
+            <Tab label="Home" href="#" />
+            <Tab label="Single player" href="#SinglePlayer" />
+            <Tab label="Multiplayer" href="#MultiPlayer" />
+            <Tab label="Mobile" href="#Mobile" />
+          </Tabs>
+        </AppBar>
+        <TabContainer>
+          <ContainedComponent index={index} />
+        </TabContainer>
+      </MuiThemeProvider>
+    </div>
+  );
 }
 
 export default ButtonAppBar;
