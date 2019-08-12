@@ -5,7 +5,7 @@ import '../Technologies.css';
 
 const ChipHelper = ({ chips }) => (
   chips.map(({ img, label }) => (
-    <Chip avatar={<Avatar src={img} />} label={label} />
+    <Chip key={img} avatar={<Avatar src={img} />} label={label} />
   ))
 );
 

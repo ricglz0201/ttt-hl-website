@@ -30,69 +30,57 @@ const styles = theme => ({
   },
 });
 
-class Carousel extends React.Component {
-  constructor() {
-    super();
+function Carousel({ classes, theme, steps }) {
+  const [activeStep, setActiveStep] = React.useState(0);
+  const [isOpen, setIsOpen] = React.useState(false);
 
-    this.state = {
-      activeStep: 0,
-      isOpen: false,
-    };
+  const handleStepChange = React.useCallback((newStep) => {
+    setActiveStep(newStep);
+  }, []);
 
-    this.handleStepChange = this.handleStepChange.bind(this);
-  }
+  const onTrigger = React.useCallback(() => {
+    setIsOpen(prevState => !prevState);
+  }, []);
 
-  handleStepChange = (activeStep) => {
-    this.setState({ activeStep });
-  };
+  const maxSteps = steps.length;
 
-  handleClick = () => {
-    this.setState({ isOpen: true });
-  }
+  const onMovePrevRequest = React.useCallback(() => {
+    setActiveStep(prevStep => (prevStep + maxSteps - 1) % maxSteps);
+  }, [maxSteps]);
+  const onMoveNextRequest = React.useCallback(() => {
+    setActiveStep(prevStep => (prevStep + 1) % maxSteps);
+  }, [maxSteps]);
 
-  render() {
-    const { classes, theme, steps } = this.props;
-    const { activeStep, isOpen } = this.state;
-
-    const maxSteps = steps.length;
-
-    return (
-      <div className={classes.root}>
-        <AutoPlaySwipeableViews
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={activeStep}
-          onChangeIndex={this.handleStepChange}
-          onClick={this.handleClick}
-        >
-          {steps.map(step => (
-            <img key={step.id} className={classes.img} src={step.img} alt="" />
-          ))}
-        </AutoPlaySwipeableViews>
-        <MobileStepper
-          steps={maxSteps}
-          position="static"
-          activeStep={activeStep}
-          className={classes.mobileStepper}
+  return (
+    <div className={classes.root}>
+      <AutoPlaySwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+        onClick={onTrigger}
+      >
+        {steps.map(step => (
+          <img key={step.id} className={classes.img} src={step.img} alt="" />
+        ))}
+      </AutoPlaySwipeableViews>
+      <MobileStepper
+        steps={maxSteps}
+        position="static"
+        activeStep={activeStep}
+        className={classes.mobileStepper}
+      />
+      {isOpen && (
+        <Lightbox
+          mainSrc={steps[activeStep].img}
+          nextSrc={steps[(activeStep + 1) % maxSteps].img}
+          prevSrc={steps[(activeStep + maxSteps - 1) % maxSteps].img}
+          onCloseRequest={onTrigger}
+          onMovePrevRequest={onMovePrevRequest}
+          onMoveNextRequest={onMoveNextRequest}
         />
-        {isOpen && (
-          <Lightbox
-            mainSrc={steps[activeStep].img}
-            nextSrc={steps[(activeStep + 1) % maxSteps].img}
-            prevSrc={steps[(activeStep + maxSteps - 1) % maxSteps].img}
-            onCloseRequest={() => this.setState({ isOpen: false })}
-            onMovePrevRequest={() => this.setState({
-              activeStep: (activeStep + maxSteps - 1) % maxSteps,
-            })
-            }
-            onMoveNextRequest={() => this.setState({
-              activeStep: (activeStep + 1) % maxSteps,
-            })
-            }
-          />
-        )}
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 }
 
 Carousel.propTypes = {
