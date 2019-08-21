@@ -15,7 +15,7 @@
     "i": "^0.3.6",
     "json-schema-traverse": "^0.4.1",
     "merge": "^1.2.1",
-    "npm": "^6.10.3",
+    "npm": "^6.11.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-clicketyclack": "^1.2.2",
