@@ -29,7 +29,7 @@ function HomePage() {
             {headline}
           </Typography>
           <Typography variant="display1" align="center" className="title" component="p">
-            Tic Tac Toe taken to a
+            Tic Tac Toe taken to a&nbsp;
             <ClicketyClack lines={line} erase="true" repeat="true" style={{ color: '#FF9A16' }} />
             <span style={{ color: '#FF9A16' }}>|</span>
           </Typography>
