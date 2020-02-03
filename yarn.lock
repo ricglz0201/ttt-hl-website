@@ -1473,6 +1473,13 @@
     "@babel/helper-plugin-utils" "^7.8.3"
     "@babel/plugin-transform-typescript" "^7.8.3"
 
+"@babel/runtime@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0.tgz#adeb78fedfc855aa05bc041640f3f6f98e85424c"
+  integrity sha512-7hGhzlcmg01CvH1EHdSPVXYX1aJ8KCEyz6I9xYIi/asDtzBPMyMhVibhM/K6g/5qnKBwjZtp10bNZIEFTRW1MA==
+  dependencies:
+    regenerator-runtime "^0.12.0"
+
 "@babel/runtime@7.8.4", "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2":
   version "7.8.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.4.tgz#d79f5a2040f7caa24d53e563aad49cbc05581308"
@@ -10974,25 +10981,25 @@ react-scripts@^3.3.1:
   optionalDependencies:
     fsevents "2.1.2"
 
-react-swipeable-views-core@^0.13.6:
-  version "0.13.6"
-  resolved "https://registry.yarnpkg.com/react-swipeable-views-core/-/react-swipeable-views-core-0.13.6.tgz#361f432ab33e22fec0c3576fe034b864ac60c015"
-  integrity sha512-Bb+0UE/ufvmUuxiscMStCp8LiJJF7GGJY6soFnqS+Jolm8CgUWFqBn61BKhsI3wytlmwkuafXo1dtvSramwCVA==
+react-swipeable-views-core@^0.13.6, react-swipeable-views-core@^0.13.7:
+  version "0.13.7"
+  resolved "https://registry.yarnpkg.com/react-swipeable-views-core/-/react-swipeable-views-core-0.13.7.tgz#c082b553f26e83fd20fc17f934200eb717023c8a"
+  integrity sha512-ekn9oDYfBt0oqJSGGwLEhKvn+QaqMGTy//9dURTLf+vp7W5j6GvmKryYdnwJCDITaPFI2hujXV4CH9krhvaE5w==
   dependencies:
-    "@babel/runtime" "^7.0.0"
+    "@babel/runtime" "7.0.0"
     warning "^4.0.1"
 
-react-swipeable-views-utils@^0.13.4, react-swipeable-views-utils@^0.13.6:
-  version "0.13.6"
-  resolved "https://registry.yarnpkg.com/react-swipeable-views-utils/-/react-swipeable-views-utils-0.13.6.tgz#1b93185087aa87128e8c5d8f8c8924630e785333"
-  integrity sha512-svjPTIxr4/LiuxGWv5xTNSlas6zUZEskSQ/6adUxwFpKUwjBe9oY4iRj8TGXSPNMNBsv+fxzFsy1ofeHuhTsKA==
+react-swipeable-views-utils@^0.13.6, react-swipeable-views-utils@^0.13.7:
+  version "0.13.7"
+  resolved "https://registry.yarnpkg.com/react-swipeable-views-utils/-/react-swipeable-views-utils-0.13.7.tgz#c939eca03bfcfb4cc6aea4088859407146ef82cd"
+  integrity sha512-XdHWE2Ea9uBJeI3U7KHZ8pVG/OpcE0lAg6n6mBCXgYFFMCbizU0OXOhPHwf9zsjnt78ClK1Oof2jeluHwhTI3g==
   dependencies:
-    "@babel/runtime" "^7.0.0"
+    "@babel/runtime" "7.0.0"
     fbjs "^0.8.4"
     keycode "^2.1.7"
     prop-types "^15.6.0"
     react-event-listener "^0.6.0"
-    react-swipeable-views-core "^0.13.6"
+    react-swipeable-views-core "^0.13.7"
 
 react-swipeable-views@^0.13.6:
   version "0.13.6"
@@ -11208,6 +11215,11 @@ regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
   integrity sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==
+
+regenerator-runtime@^0.12.0:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.12.1.tgz#fa1a71544764c036f8c49b13a08b2594c9f8a0de"
+  integrity sha512-odxIc1/vDlo4iZcfXqRYFj0vpXFNoGdKMAUieAlFYO6m/nl5e9KR/beGf41z4a1FI+aQgtjhuaSlDxQ0hmkrHg==
 
 regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.3:
   version "0.13.3"
