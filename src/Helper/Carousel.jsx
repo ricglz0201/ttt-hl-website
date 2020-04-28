@@ -9,7 +9,7 @@ import 'react-image-lightbox/style.css';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     maxWidth: 400,
     flexGrow: 1,
@@ -39,16 +39,16 @@ function Carousel({ classes, theme, steps }) {
   }, []);
 
   const onTrigger = React.useCallback(() => {
-    setIsOpen(prevState => !prevState);
+    setIsOpen((prevState) => !prevState);
   }, []);
 
   const maxSteps = steps.length;
 
   const onMovePrevRequest = React.useCallback(() => {
-    setActiveStep(prevStep => (prevStep + maxSteps - 1) % maxSteps);
+    setActiveStep((prevStep) => (prevStep + maxSteps - 1) % maxSteps);
   }, [maxSteps]);
   const onMoveNextRequest = React.useCallback(() => {
-    setActiveStep(prevStep => (prevStep + 1) % maxSteps);
+    setActiveStep((prevStep) => (prevStep + 1) % maxSteps);
   }, [maxSteps]);
 
   return (
@@ -59,7 +59,7 @@ function Carousel({ classes, theme, steps }) {
         onChangeIndex={handleStepChange}
         onClick={onTrigger}
       >
-        {steps.map(step => (
+        {steps.map((step) => (
           <img key={step.id} className={classes.img} src={step.img} alt="" />
         ))}
       </AutoPlaySwipeableViews>
