@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/ttt-hl-website/static/css/main.7a86ff3a.chunk.css",
+    "main.js": "/ttt-hl-website/static/js/main.a24473ea.chunk.js",
+    "main.js.map": "/ttt-hl-website/static/js/main.a24473ea.chunk.js.map",
+    "runtime-main.js": "/ttt-hl-website/static/js/runtime-main.9bcc54eb.js",
+    "runtime-main.js.map": "/ttt-hl-website/static/js/runtime-main.9bcc54eb.js.map",
+    "static/css/2.fd56a40e.chunk.css": "/ttt-hl-website/static/css/2.fd56a40e.chunk.css",
+    "static/js/2.732a4058.chunk.js": "/ttt-hl-website/static/js/2.732a4058.chunk.js",
+    "static/js/2.732a4058.chunk.js.map": "/ttt-hl-website/static/js/2.732a4058.chunk.js.map",
+    "index.html": "/ttt-hl-website/index.html",
+    "precache-manifest.5e9e04f6947a4e708e99d16a6428ebbe.js": "/ttt-hl-website/precache-manifest.5e9e04f6947a4e708e99d16a6428ebbe.js",
+    "service-worker.js": "/ttt-hl-website/service-worker.js",
+    "static/css/2.fd56a40e.chunk.css.map": "/ttt-hl-website/static/css/2.fd56a40e.chunk.css.map",
+    "static/css/main.7a86ff3a.chunk.css.map": "/ttt-hl-website/static/css/main.7a86ff3a.chunk.css.map",
+    "static/js/2.732a4058.chunk.js.LICENSE.txt": "/ttt-hl-website/static/js/2.732a4058.chunk.js.LICENSE.txt",
+    "static/media/bootstrap_logo.svg": "/ttt-hl-website/static/media/bootstrap_logo.06596577.svg",
+    "static/media/i18n_logo.png": "/ttt-hl-website/static/media/i18n_logo.cbf033e5.png",
+    "static/media/jquery_logo.png": "/ttt-hl-website/static/media/jquery_logo.c12277f7.png",
+    "static/media/js_logo.png": "/ttt-hl-website/static/media/js_logo.0cded3a3.png",
+    "static/media/mp1.png": "/ttt-hl-website/static/media/mp1.b4b18354.png",
+    "static/media/mp2.png": "/ttt-hl-website/static/media/mp2.678cd4a9.png",
+    "static/media/mp3.png": "/ttt-hl-website/static/media/mp3.948065ae.png",
+    "static/media/mp4.png": "/ttt-hl-website/static/media/mp4.2ade4e63.png",
+    "static/media/mp5.png": "/ttt-hl-website/static/media/mp5.6c391cc8.png",
+    "static/media/mp6.png": "/ttt-hl-website/static/media/mp6.efaded87.png",
+    "static/media/rn_logo.png": "/ttt-hl-website/static/media/rn_logo.5209f803.png",
+    "static/media/index.css": "/ttt-hl-website/static/media/roboto-latin-900italic.ebf6d164.woff2",
+    "static/media/ror_logo.png": "/ttt-hl-website/static/media/ror_logo.99dccb08.png",
+    "static/media/sp1.png": "/ttt-hl-website/static/media/sp1.307fba1f.png",
+    "static/media/sp2.png": "/ttt-hl-website/static/media/sp2.8f4f6e5b.png",
+    "static/media/sp3.png": "/ttt-hl-website/static/media/sp3.4fd3dacf.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9bcc54eb.js",
+    "static/css/2.fd56a40e.chunk.css",
+    "static/js/2.732a4058.chunk.js",
+    "static/css/main.7a86ff3a.chunk.css",
+    "static/js/main.a24473ea.chunk.js"
+  ]
+}
