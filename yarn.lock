@@ -11480,10 +11480,10 @@ react-fontawesome@^1.7.1:
   dependencies:
     prop-types "^15.5.6"
 
-react-image-lightbox@^5.1.3:
-  version "5.1.3"
-  resolved "https://registry.yarnpkg.com/react-image-lightbox/-/react-image-lightbox-5.1.3.tgz#62509d2d96b4d088274d85fb9b497643dcf43a68"
-  integrity sha512-/AM8Fk55RD1t+kr7DgHYSHP1q+lCpIwv82B9wwn0EFPs6Ua03J/C/CK398NEQAB1IVIP4vx3NLfmY2Ua6MYuLQ==
+react-image-lightbox@^5.1.4:
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/react-image-lightbox/-/react-image-lightbox-5.1.4.tgz#5b847dcb79e9efdf9d7cd5621a92e0f156d2cf30"
+  integrity sha512-kTiAODz091bgT7SlWNHab0LSMZAPJtlNWDGKv7pLlLY1krmf7FuG1zxE0wyPpeA8gPdwfr3cu6sPwZRqWsc3Eg==
   dependencies:
     prop-types "^15.7.2"
     react-modal "^3.11.1"
